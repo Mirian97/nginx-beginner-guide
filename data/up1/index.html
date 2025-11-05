@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Mim - Minha Página Pessoal</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: #fff;
+        line-height: 1.7;
+        padding: 20px;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 40px;
+        border-radius: 16px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .profile-img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        border: 5px solid #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+        background-color: #ccc;
+      }
+      h1 {
+        font-size: 2.8rem;
+        margin-bottom: 10px;
+        color: #fff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.3rem;
+        color: #e0f7fa;
+        margin-bottom: 25px;
+        font-style: italic;
+      }
+      .bio {
+        font-size: 1.1rem;
+        margin: 25px 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        border-radius: 12px;
+      }
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 30px 0;
+      }
+      .skill-tag {
+        background-color: #5e35b1;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      .skill-tag:hover {
+        background-color: #7e57c2;
+        transform: translateY(-3px);
+      }
+      .social-links {
+        margin: 30px 0;
+      }
+      .social-links a {
+        display: inline-block;
+        margin: 0 12px;
+        color: #fff;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+      }
+      .social-links a:hover {
+        transform: scale(1.2);
+        color: #ffeb3b;
+      }
+      footer {
+        margin-top: 50px;
+        font-size: 0.9rem;
+        color: #bbdefb;
+      }
+      .quote {
+        font-style: italic;
+        color: #e8f5e9;
+        margin: 25px 0;
+        font-size: 1.1rem;
+      }
+    </style>
+    <!-- Ícones (Font Awesome via CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Seu Nome Aqui</h1>
+      <p class="subtitle">
+        Desenvolvedor | Entusiasta de Tecnologia | Aprendiz Eterno
+      </p>
+      <div class="bio">
+        <p>
+          Olá! Eu sou um apaixonado por tecnologia, programação e soluções
+          criativas. Trabalho com desenvolvimento web, automação e estou sempre
+          em busca de aprender algo novo. Gosto de transformar ideias em código
+          funcional e bonito.
+        </p>
+      </div>
+
+      <p class="quote">
+        "O código é como poesia: quanto mais simples, mais poderoso."
+      </p>
+
+      <h2 style="margin: 30px 0 15px; color: #fff">Minhas Habilidades</h2>
+      <div class="skills">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Git</span>
+        <span class="skill-tag">Linux</span>
+        <span class="skill-tag">NGINX</span>
+        <span class="skill-tag">Design Responsivo</span>
+      </div>
+
+      <h2 style="margin: 35px 0 15px; color: #fff">Me Encontre</h2>
+      <div class="social-links">
+        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 Seu Nome. Feito com ❤️ e um pouco de código.</p>
+      </footer>
+    </div>
+  </body>
+</html>
