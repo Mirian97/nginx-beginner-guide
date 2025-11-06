@@ -1,9 +1,43 @@
 # Nginx Begginer Guide
 
-## Serving Static Content
+## Simple Proxy Server
 
-This section explains how Nginx serves static files (such as HTML, CSS, images, and other assets) directly from the filesystem without involving any backend application.
+Nginx can act as a **reverse proxy**, receiving a request from the client and forwarding it to another internal server using `proxy_pass`.
 
-Nginx uses the root or alias directives inside a location block to map incoming request paths to directories on the server. When a user requests a file, Nginx looks for it in the specified directory, and if it exists, the file is returned directly and efficiently. If the requested file is not found, Nginx returns a 404 Not Found error.
+Example:
 
-You can also use try_files to control how Nginx checks for files and define fallbacks. Nginx is optimized for performance when serving static content and can deliver these files very quickly with minimal resource usage.
+```nginx
+location / {
+    proxy_pass http://localhost:8080;
+}
+```
+
+Requests to `/` are sent to the backend running on port **8080**, and Nginx returns the backend’s response to the user.
+
+## Static Files + Proxy
+
+Nginx can also serve static files directly:
+
+```nginx
+location ~ \.(gif|jpg|png)$ {
+    root /data/images;
+}
+```
+
+So Nginx can both:
+
+- proxy dynamic requests to a backend
+- serve static files from disk
+
+## Multiple Servers
+
+You can define a backend inside Nginx itself:
+
+```nginx
+server {
+    listen 8080;
+    root /data/up1;
+}
+```
+
+Then the main server proxies to it. This forms a simple and complete proxy setup.
